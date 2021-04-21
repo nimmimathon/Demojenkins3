@@ -4,7 +4,7 @@ $ptn
 echo "above is the pwd"
 $path = '.\tmp'
 $additionalParameters = '-v C:\Users\nirmal\AppData\Local\Jenkins\.jenkins\workspace\demo2\tmp:C:\Run\tmp'
-$containerName = 'testnavs459'
+$containerName = 'testnavs466'
 $password = 'P@ssw0rd'
 $securePassword = ConvertTo-SecureString -String $password -AsPlainText -Force
 $credential = New-Object pscredential 'admin', $securePassword
@@ -21,6 +21,8 @@ New-BcContainer `
     -licenseFile $licenseFile `
     -memoryLimit 4G `
     -additionalParameters $additionalParameters `
+    -includeCSide `
+    -doNotExportObjectsToText `
     -updateHosts
 
 
