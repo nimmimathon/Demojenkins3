@@ -1,4 +1,7 @@
 ﻿Import-Module BcContainerHelper
+$ptn =Get-Location | Select Path -ExpandProperty Path
+$ptn
+echo "above is the pwd"
 $path = '.\tmp'
 $additionalParameters = '-v $path:C:\Run\tmp'
 $containerName = 'testnavs345'
