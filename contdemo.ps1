@@ -1,5 +1,5 @@
 ﻿Import-Module BcContainerHelper
-$additionalParameters = '-v .\tmp:C:\Run\tmp'
+$additionalParameters = '-v \\52.174.144.101\c$\tmp:C:\Run\tmp'
 $containerName = 'testnavs345'
 $password = 'P@ssw0rd'
 $securePassword = ConvertTo-SecureString -String $password -AsPlainText -Force
