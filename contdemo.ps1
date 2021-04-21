@@ -4,7 +4,7 @@ $ptn
 echo "above is the pwd"
 $path = '.\tmp'
 $additionalParameters = '-v C:\Users\nirmal\AppData\Local\Jenkins\.jenkins\workspace\demo2\tmp:C:\Run\tmp'
-$containerName = 'testnavs450'
+$containerName = 'testnavs457'
 $password = 'P@ssw0rd'
 $securePassword = ConvertTo-SecureString -String $password -AsPlainText -Force
 $credential = New-Object pscredential 'admin', $securePassword
@@ -23,4 +23,4 @@ New-BcContainer `
     -additionalParameters $additionalParameters `
     -updateHosts
 
-Import-DeltasToNavContainer -containerName $containerName -deltaFolder '.\tmp'
+Import-DeltasToNavContainer -containerName $containerName -deltaFolder 'C:\Users\nirmal\AppData\Local\Jenkins\.jenkins\workspace\demo2\tmp'
