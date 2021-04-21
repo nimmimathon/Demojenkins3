@@ -6,7 +6,7 @@ $securePassword = ConvertTo-SecureString -String $password -AsPlainText -Force
 $credential = New-Object pscredential 'admin', $securePassword
 $auth = 'UserPassword'
 $artifactUrl = Get-NavArtifactUrl -nav 2018 -cu 18 -country de
-$licenseFile = '.\Demojenkins\DevLicense2.flf'
+$licenseFile = '.\DevLicense2.flf'
 New-BcContainer `
     -accept_eula `
     -containerName $containerName `
