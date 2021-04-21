@@ -3,8 +3,8 @@ $ptn =Get-Location | Select Path -ExpandProperty Path
 $ptn
 echo "above is the pwd"
 $path = '.\tmp'
-$additionalParameters = '-v $path:C:\Run\tmp'
-$containerName = 'testnavs345'
+$additionalParameters = '-v C:\Users\nirmal\AppData\Local\Jenkins\.jenkins\workspace\demo2\tmp:C:\Run\tmp'
+$containerName = 'testnavs450'
 $password = 'P@ssw0rd'
 $securePassword = ConvertTo-SecureString -String $password -AsPlainText -Force
 $credential = New-Object pscredential 'admin', $securePassword
