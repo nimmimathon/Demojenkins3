@@ -1,6 +1,6 @@
 ﻿Import-Module BcContainerHelper
 $additionalParameters = '-v .\tmp:C:\Run\tmp'
-$containerName = 'testnavs331'
+$containerName = 'testnavs345'
 $password = 'P@ssw0rd'
 $securePassword = ConvertTo-SecureString -String $password -AsPlainText -Force
 $credential = New-Object pscredential 'admin', $securePassword
@@ -19,4 +19,4 @@ New-BcContainer `
     -additionalParameters $additionalParameters `
     -updateHosts
 
-Import-DeltasToNavContainer -containerName testnavs331 -deltaFolder '.\tmp'
+Import-DeltasToNavContainer -containerName $containerName -deltaFolder '.\tmp'
