@@ -1,11 +1,10 @@
-Jenkinsfile (Declarative Pipeline)
 pipeline {
     agent any
 
     stages {
         stage('Build') {
             steps {
-                contdemo.ps1
+                . ("contdemo.ps1")
                 echo 'Building..'
             }
         }
@@ -21,3 +20,5 @@ pipeline {
         }
     }
 }
+
+
