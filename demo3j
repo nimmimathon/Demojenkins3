@@ -5,6 +5,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
+                .\contdemo.ps1
                 echo 'Building..'
             }
         }
