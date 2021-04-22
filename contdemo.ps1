@@ -4,7 +4,7 @@ $ptn
 echo "above is the pwd"
 $path = '.\tmp'
 $additionalParameters = '-v C:\Users\nirmal\AppData\Local\Jenkins\.jenkins\workspace\demo2\tmp:C:\Run\tmp'
-$containerName = 'testnavs466'
+$containerName = 'testnavs488'
 $password = 'P@ssw0rd'
 $securePassword = ConvertTo-SecureString -String $password -AsPlainText -Force
 $credential = New-Object pscredential 'admin', $securePassword
@@ -28,3 +28,11 @@ New-BcContainer `
 
 Start-Sleep -Seconds 30
 Import-DeltasToNavContainer -containerName $containerName -deltaFolder 'C:\Users\nirmal\AppData\Local\Jenkins\.jenkins\workspace\demo2\tmp'
+
+docker commit $containerName 22aprilnavimg:21april_3
+write-host "Created Docker Image successfully"
+
+docker rm $containerName
+write-host "Docker container removed successfully"
+
+
