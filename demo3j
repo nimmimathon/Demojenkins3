@@ -5,12 +5,12 @@ pipeline {
         stage('Build') {
             steps {           
             powershell '.\\contdemo.ps1'
+            powershell '.\\26april_2.ps1'
             }
         }
         stage('Test') {
             steps {
-                echo 'Testing..'
-                powershell '.\\26april_2.ps1'               
+                echo 'Testing..'                  
             }
         }
         stage('Deploy') {
