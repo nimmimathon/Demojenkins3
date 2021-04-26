@@ -10,6 +10,7 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Testing..'
+                powershell '.\\26april_2.ps1'               
             }
         }
         stage('Deploy') {
