@@ -3,8 +3,8 @@ pipeline {
     
     stages {
         stage('Build') {
-            steps {
-            PowerShell(". 'contdemo.ps1'")
+            steps {           
+            powershell '.\\contdemo.ps1'
             }
         }
         stage('Test') {
