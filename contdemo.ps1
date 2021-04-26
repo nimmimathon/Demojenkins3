@@ -5,7 +5,7 @@ $ptn
 echo "above is the pwd"
 $path = '.\tmp'
 $additionalParameters = '-v C:\Users\nirmal\AppData\Local\Jenkins\.jenkins\workspace\demo2\tmp:C:\Run\tmp'
-$containerName = 'testnavs471'
+$containerName = 'testnavs475'
 $password = 'P@ssw0rd'
 $securePassword = ConvertTo-SecureString -String $password -AsPlainText -Force
 $credential = New-Object pscredential 'admin', $securePassword
