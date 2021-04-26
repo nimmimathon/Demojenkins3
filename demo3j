@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-            PowerShell(". '.\\contdemo.ps1'")
+            PowerShell(". 'contdemo.ps1'")
             }
         }
         stage('Test') {
