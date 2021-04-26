@@ -1,4 +1,5 @@
-﻿Import-Module BcContainerHelper
+echo "entered powershell function"
+Import-Module BcContainerHelper
 $ptn =Get-Location | Select Path -ExpandProperty Path
 $ptn
 echo "above is the pwd"
