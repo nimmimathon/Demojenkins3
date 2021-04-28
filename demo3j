@@ -2,10 +2,9 @@ pipeline {
     agent any
     
     stages {
-        stage('Build') {
+        stage('staging_deployment') {
             steps {           
-            powershell '.\\contdemo.ps1'
-            powershell '.\\26april_2.ps1'
+            powershell '.(C:\\temp\\contdemo.ps1)'			
             }
         }
         stage('Test') {
